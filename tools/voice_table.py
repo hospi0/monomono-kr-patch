@@ -33,7 +33,7 @@ def main():
     for fn in ('OPENING.MSG', 'ENDING.MSG'):
         for nm, pic, wait, off in voices(fn):
             a = asr.get(nm, {}); jp = a.get('JP', '')
-            if not jp or jp.rstrip('。!?！？、') in NONVERBAL or 'トーベー、博士、モノモノ' in jp:   # 뒤 = 힌트 문구 환각          # 하스피: 비언어로 추정되는 짧은 줄은 뺀다
+            if nm not in kt and (not jp or jp.rstrip('。!?！？、') in NONVERBAL or 'トーベー、博士、モノモノ' in jp):   # 뒤 = 힌트 문구 환각 · 번역(voice_ko)에 있으면 받아쓰기와 상관없이 넣음          # 하스피: 비언어로 추정되는 짧은 줄은 뺀다
                 drop += 1; continue
             n += 1
             k = kt.get(nm, {})
