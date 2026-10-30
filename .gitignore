@@ -1,0 +1,15 @@
+work/
+my files/
+dist/
+__pycache__/
+!work/
+work/*
+!work/text/
+work/text/*
+!work/text/uniq.tsv
+!work/text/abs.tsv
+!work/text/gfx.tsv
+!work/voice/
+work/voice/*
+!work/voice/voice.tsv
+!work/voice/voice_ko.tsv
